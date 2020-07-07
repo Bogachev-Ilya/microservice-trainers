@@ -3,9 +3,9 @@ server.port: 8051
 spring:
   application.name: service-trainers
   datasource:
-    url: jdbc:postgresql://localhost/service-trainers?useUnicod=true&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:postgresql://localhost/serviceTrainer?useUnicod=true&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
     username: postgres
-    password: ENC(wR1EBiKOVKeYmH8pp4bBTMQEj5Ncm3rj)
+    password: ENC(V3cwEwJuKbIqcpNzxNjftcx7kH+EvlxI)
   jpa:
     show-sql: true
     database-platform: org.hibernate.dialect.PostgreSQL94Dialect

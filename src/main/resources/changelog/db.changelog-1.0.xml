@@ -7,12 +7,57 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
-    <changeSet  id="1"  author="ilia">
+    <changeSet  id="1"  author="Ilia">
         <sql>
-
+            CREATE TABLE trainer(
+            id SERIAL NOT NULL,
+            name VARCHAR(255) NOT NULL,
+            surname VARCHAR(255) NOT NULL,
+            patronymic VARCHAR(255),
+            birthday DATE,
+            PRIMARY KEY (id)
+            );
         </sql>
         <rollback>
-            DROP TABLE teacher;
+            DROP TABLE trainer;
+        </rollback>
+    </changeSet>
+    <changeSet id="2" author="Ilia">
+        <sql>
+            CREATE TABLE room(
+            id SERIAL NOT NULL,
+            name VARCHAR(255) NOT NULL,
+            PRIMARY KEY (id)
+            );
+        </sql>
+        <rollback>
+            DROP TABLE room;
+        </rollback>
+    </changeSet>
+    <changeSet id="2" author="Ilia">
+        <sql>
+            CREATE TABLE room(
+            id SERIAL NOT NULL,
+            name VARCHAR(255) NOT NULL,
+            PRIMARY KEY (id)
+            );
+        </sql>
+        <rollback>
+            DROP TABLE room;
+        </rollback>
+    </changeSet>
+    <changeSet id="3" author="Ilia">
+        <sql>
+            CREATE TABLE lesson(
+            id SERIAL NOT NULL,
+            room_id SERIAL NOT NULL,
+            lesson_date DATETIME NOT NULL,
+            client_id SERIAL NOT NULL,
+            PRIMARY KEY (id)
+            );
+        </sql>
+        <rollback>
+            DROP TABLE lesson;
         </rollback>
     </changeSet>
 </databaseChangeLog>

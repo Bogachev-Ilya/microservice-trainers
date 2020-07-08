@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface LessonRepository extends JpaRepository<Lesson, Long> {
 
-    List<Lesson> findAllByRoomId(String roomId);
+    List<Lesson> findAllByRoomId(Long roomId);
     List<Lesson> findAllByLessonDate(LocalDateTime lessonDate);
 
 
